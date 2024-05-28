@@ -1,0 +1,374 @@
+<html>
+<head>
+<title>pillar_of_oops.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+pillar_of_oops.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">//                                                           FIRST PILLAR - INHERITANCE;</span>
+<a name="l2"><span class="ln">2    </span></a><span class="s0">/*class Vehicle{ 
+<a name="l3"><span class="ln">3    </span></a>    int speed =145; 
+<a name="l4"><span class="ln">4    </span></a> 
+<a name="l5"><span class="ln">5    </span></a>    public void brake(){ 
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a>        System.out.println(&quot;stop the car&quot;); 
+<a name="l8"><span class="ln">8    </span></a>    } 
+<a name="l9"><span class="ln">9    </span></a>} 
+<a name="l10"><span class="ln">10   </span></a>class thar extends Vehicle{ 
+<a name="l11"><span class="ln">11   </span></a>    public void dual_speed(){ 
+<a name="l12"><span class="ln">12   </span></a>        System.out.println(&quot;thar has dual_speed&quot;); 
+<a name="l13"><span class="ln">13   </span></a>    } 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a>} 
+<a name="l16"><span class="ln">16   </span></a> 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a>public class pillar_of_oops { 
+<a name="l19"><span class="ln">19   </span></a>    public static void main(String[] args) { 
+<a name="l20"><span class="ln">20   </span></a>        //accessing non_static properties by creating object 
+<a name="l21"><span class="ln">21   </span></a>        Vehicle obj = new Vehicle(); 
+<a name="l22"><span class="ln">22   </span></a> 
+<a name="l23"><span class="ln">23   </span></a>        obj.brake(); 
+<a name="l24"><span class="ln">24   </span></a>        System.out.println(obj.speed); 
+<a name="l25"><span class="ln">25   </span></a> 
+<a name="l26"><span class="ln">26   </span></a>        //accessing same objects of vehicle class by creating child object 
+<a name="l27"><span class="ln">27   </span></a>        thar obj1= new thar(); 
+<a name="l28"><span class="ln">28   </span></a>        obj1.dual_speed(); 
+<a name="l29"><span class="ln">29   </span></a>        obj1.brake(); 
+<a name="l30"><span class="ln">30   </span></a>        System.out.println(obj1.speed); 
+<a name="l31"><span class="ln">31   </span></a> 
+<a name="l32"><span class="ln">32   </span></a>        //making changes in child class objects; do nor reflect any change in parent class object 
+<a name="l33"><span class="ln">33   </span></a>        obj1.speed =150; 
+<a name="l34"><span class="ln">34   </span></a>        System.out.println(obj1.speed); 
+<a name="l35"><span class="ln">35   </span></a>        System.out.println(obj.speed); 
+<a name="l36"><span class="ln">36   </span></a> 
+<a name="l37"><span class="ln">37   </span></a>        //making changes in parent class object; do not affect child class object as well 
+<a name="l38"><span class="ln">38   </span></a>        System.out.println(&quot;making changes in parent class object;&quot;); 
+<a name="l39"><span class="ln">39   </span></a>        obj.speed= 200; 
+<a name="l40"><span class="ln">40   </span></a>        System.out.println(obj.speed); 
+<a name="l41"><span class="ln">41   </span></a>        System.out.println(obj1.speed); 
+<a name="l42"><span class="ln">42   </span></a> 
+<a name="l43"><span class="ln">43   </span></a> 
+<a name="l44"><span class="ln">44   </span></a> 
+<a name="l45"><span class="ln">45   </span></a> 
+<a name="l46"><span class="ln">46   </span></a>    } 
+<a name="l47"><span class="ln">47   </span></a>}*/</span>
+<a name="l48"><span class="ln">48   </span></a><span class="s0">/* 
+<a name="l49"><span class="ln">49   </span></a>class A{ 
+<a name="l50"><span class="ln">50   </span></a>    public void print(){ 
+<a name="l51"><span class="ln">51   </span></a>        System.out.println(&quot;using print method of A&quot;); 
+<a name="l52"><span class="ln">52   </span></a>    } 
+<a name="l53"><span class="ln">53   </span></a>} 
+<a name="l54"><span class="ln">54   </span></a>class B extends A{ 
+<a name="l55"><span class="ln">55   </span></a>    public void print(){ 
+<a name="l56"><span class="ln">56   </span></a>        System.out.println(&quot;using print method of B&quot;); 
+<a name="l57"><span class="ln">57   </span></a>    } 
+<a name="l58"><span class="ln">58   </span></a> 
+<a name="l59"><span class="ln">59   </span></a>} 
+<a name="l60"><span class="ln">60   </span></a>class C extends B{ 
+<a name="l61"><span class="ln">61   </span></a>    public void print(){ 
+<a name="l62"><span class="ln">62   </span></a>        System.out.println(&quot;using print method of C&quot;); 
+<a name="l63"><span class="ln">63   </span></a>    } 
+<a name="l64"><span class="ln">64   </span></a> 
+<a name="l65"><span class="ln">65   </span></a>} 
+<a name="l66"><span class="ln">66   </span></a>public class pillar_of_oops { 
+<a name="l67"><span class="ln">67   </span></a>    public static void main(String[] args) { 
+<a name="l68"><span class="ln">68   </span></a>      //  A obj = new A(); 
+<a name="l69"><span class="ln">69   </span></a>      //  obj.print(); 
+<a name="l70"><span class="ln">70   </span></a>      //  System.out.println(); 
+<a name="l71"><span class="ln">71   </span></a>      //  B obj = new B(); 
+<a name="l72"><span class="ln">72   </span></a>       // obj.print(); 
+<a name="l73"><span class="ln">73   </span></a> 
+<a name="l74"><span class="ln">74   </span></a>        System.out.println(); 
+<a name="l75"><span class="ln">75   </span></a>        C obj = new C(); 
+<a name="l76"><span class="ln">76   </span></a>        obj.print(); 
+<a name="l77"><span class="ln">77   </span></a>    } 
+<a name="l78"><span class="ln">78   </span></a>} 
+<a name="l79"><span class="ln">79   </span></a> */</span>
+<a name="l80"><span class="ln">80   </span></a>
+<a name="l81"><span class="ln">81   </span></a>
+<a name="l82"><span class="ln">82   </span></a><span class="s0">//IF C does not have its own print it will look if B has print or not if yes it will use print of B</span>
+<a name="l83"><span class="ln">83   </span></a><span class="s0">/*lass A{ 
+<a name="l84"><span class="ln">84   </span></a>    public void print(){ 
+<a name="l85"><span class="ln">85   </span></a>        System.out.println(&quot;using print method of A&quot;); 
+<a name="l86"><span class="ln">86   </span></a>    } 
+<a name="l87"><span class="ln">87   </span></a>} 
+<a name="l88"><span class="ln">88   </span></a>class B extends A{ 
+<a name="l89"><span class="ln">89   </span></a>    public void print(){ 
+<a name="l90"><span class="ln">90   </span></a>        System.out.println(&quot;using print method of B&quot;); 
+<a name="l91"><span class="ln">91   </span></a>    } 
+<a name="l92"><span class="ln">92   </span></a> 
+<a name="l93"><span class="ln">93   </span></a>} 
+<a name="l94"><span class="ln">94   </span></a>class C extends B{ 
+<a name="l95"><span class="ln">95   </span></a> 
+<a name="l96"><span class="ln">96   </span></a>} 
+<a name="l97"><span class="ln">97   </span></a>public class pillar_of_oops { 
+<a name="l98"><span class="ln">98   </span></a>    public static void main(String[] args) { 
+<a name="l99"><span class="ln">99   </span></a> 
+<a name="l100"><span class="ln">100  </span></a>        C obj = new C(); 
+<a name="l101"><span class="ln">101  </span></a>        obj.print(); 
+<a name="l102"><span class="ln">102  </span></a>    } 
+<a name="l103"><span class="ln">103  </span></a>} 
+<a name="l104"><span class="ln">104  </span></a>*/</span>
+<a name="l105"><span class="ln">105  </span></a>
+<a name="l106"><span class="ln">106  </span></a><span class="s0">//IF B AND C  BOTH DO NOT HAVE PRINT; THEN IT WILL LOOK IF A HAS PRINT IF A HAS IT C WILL USE PRINT OF A</span>
+<a name="l107"><span class="ln">107  </span></a><span class="s0">/* 
+<a name="l108"><span class="ln">108  </span></a>class A { 
+<a name="l109"><span class="ln">109  </span></a>    public void print() { 
+<a name="l110"><span class="ln">110  </span></a>        System.out.println(&quot;using print method of A&quot;); 
+<a name="l111"><span class="ln">111  </span></a>    } 
+<a name="l112"><span class="ln">112  </span></a>} 
+<a name="l113"><span class="ln">113  </span></a>class B extends A{ 
+<a name="l114"><span class="ln">114  </span></a> 
+<a name="l115"><span class="ln">115  </span></a> 
+<a name="l116"><span class="ln">116  </span></a>} 
+<a name="l117"><span class="ln">117  </span></a>class C extends B{ 
+<a name="l118"><span class="ln">118  </span></a> 
+<a name="l119"><span class="ln">119  </span></a>} 
+<a name="l120"><span class="ln">120  </span></a>public class pillar_of_oops { 
+<a name="l121"><span class="ln">121  </span></a>    public static void main(String[] args) { 
+<a name="l122"><span class="ln">122  </span></a> 
+<a name="l123"><span class="ln">123  </span></a> 
+<a name="l124"><span class="ln">124  </span></a>        C obj = new C(); 
+<a name="l125"><span class="ln">125  </span></a>        obj.print(); 
+<a name="l126"><span class="ln">126  </span></a>    } 
+<a name="l127"><span class="ln">127  </span></a>} 
+<a name="l128"><span class="ln">128  </span></a>*/</span>
+<a name="l129"><span class="ln">129  </span></a>
+<a name="l130"><span class="ln">130  </span></a>
+<a name="l131"><span class="ln">131  </span></a><span class="s0">//if neither of them has print() then it throws an error;</span>
+<a name="l132"><span class="ln">132  </span></a><span class="s0">/* 
+<a name="l133"><span class="ln">133  </span></a>class A {} 
+<a name="l134"><span class="ln">134  </span></a> 
+<a name="l135"><span class="ln">135  </span></a>class B extends A{ 
+<a name="l136"><span class="ln">136  </span></a> 
+<a name="l137"><span class="ln">137  </span></a> 
+<a name="l138"><span class="ln">138  </span></a>} 
+<a name="l139"><span class="ln">139  </span></a>class C extends B{ 
+<a name="l140"><span class="ln">140  </span></a> 
+<a name="l141"><span class="ln">141  </span></a>} 
+<a name="l142"><span class="ln">142  </span></a>public class pillar_of_oops { 
+<a name="l143"><span class="ln">143  </span></a>    public static void main(String[] args) { 
+<a name="l144"><span class="ln">144  </span></a> 
+<a name="l145"><span class="ln">145  </span></a> 
+<a name="l146"><span class="ln">146  </span></a>        C obj = new C(); 
+<a name="l147"><span class="ln">147  </span></a>        obj.print(); 
+<a name="l148"><span class="ln">148  </span></a>    } 
+<a name="l149"><span class="ln">149  </span></a>} 
+<a name="l150"><span class="ln">150  </span></a>*/</span>
+<a name="l151"><span class="ln">151  </span></a>
+<a name="l152"><span class="ln">152  </span></a><span class="s0">//                                         SECOND PILLAR POLY-MORPHISM</span>
+<a name="l153"><span class="ln">153  </span></a>
+<a name="l154"><span class="ln">154  </span></a><span class="s0">//POLYMORPHISM OCCURS WHEN  SAME FUNCTION/METHOD EXIST WITH DIFFERENT NUMBER OF PARAMETERS</span>
+<a name="l155"><span class="ln">155  </span></a><span class="s0">//OR DIFFERENT DATATYPE OF PARAMETERS/ARGUMENTS;</span>
+<a name="l156"><span class="ln">156  </span></a>
+<a name="l157"><span class="ln">157  </span></a><span class="s0">/*class Solution{ 
+<a name="l158"><span class="ln">158  </span></a>    public int sum(int a, int b){} 
+<a name="l159"><span class="ln">159  </span></a>    public static int sum(int a, int b, int c){} 
+<a name="l160"><span class="ln">160  </span></a>    public void sum(int a, int b, double c){} 
+<a name="l161"><span class="ln">161  </span></a>    public int sum(){} 
+<a name="l162"><span class="ln">162  </span></a> 
+<a name="l163"><span class="ln">163  </span></a> 
+<a name="l164"><span class="ln">164  </span></a>}*/</span>
+<a name="l165"><span class="ln">165  </span></a>
+<a name="l166"><span class="ln">166  </span></a>
+<a name="l167"><span class="ln">167  </span></a>
+<a name="l168"><span class="ln">168  </span></a><span class="s0">//                                                THIRD PILLAR -   ABSTRACTION;</span>
+<a name="l169"><span class="ln">169  </span></a><span class="s0">//ABSTRACTION CAN BE DONE USING RWO WAYS'</span>
+<a name="l170"><span class="ln">170  </span></a><span class="s0">// -&gt; ABSTRACT CLASS</span>
+<a name="l171"><span class="ln">171  </span></a>
+<a name="l172"><span class="ln">172  </span></a><span class="s0">//-&gt;INTERFACE CLASS</span>
+<a name="l173"><span class="ln">173  </span></a>
+<a name="l174"><span class="ln">174  </span></a>
+<a name="l175"><span class="ln">175  </span></a><span class="s0">//ABSTRACT CLASS</span>
+<a name="l176"><span class="ln">176  </span></a>
+<a name="l177"><span class="ln">177  </span></a><span class="s0">//IF NO IMPLEMENTATION IS PRESENT THEN FUNCTIONS AND METHODS WILL ALSO START FROM ABSTRACT KEYWORD</span>
+<a name="l178"><span class="ln">178  </span></a><span class="s0">/*abstract class Instagram{// abstract class is present inside some file different from implementation file; 
+<a name="l179"><span class="ln">179  </span></a> 
+<a name="l180"><span class="ln">180  </span></a> 
+<a name="l181"><span class="ln">181  </span></a>  PUBLIC   void Insta_post(){ 
+<a name="l182"><span class="ln">182  </span></a> 
+<a name="l183"><span class="ln">183  </span></a>      //  show some implementations in abstraction; 
+<a name="l184"><span class="ln">184  </span></a>        //abstraction hides only unnecesary details not all details; 
+<a name="l185"><span class="ln">185  </span></a>    } 
+<a name="l186"><span class="ln">186  </span></a>    abstract static int Insta_likes(); // in abstraction some functions can be empty; 
+<a name="l187"><span class="ln">187  </span></a>   abstract  int Insta_comments();//while some functions can  have certain code 
+<a name="l188"><span class="ln">188  </span></a>} 
+<a name="l189"><span class="ln">189  </span></a> 
+<a name="l190"><span class="ln">190  </span></a>//present on some other file; 
+<a name="l191"><span class="ln">191  </span></a>//can contain empty functions; 
+<a name="l192"><span class="ln">192  </span></a>class implementation extends Instagram{ 
+<a name="l193"><span class="ln">193  </span></a>    public void Insta_post{ 
+<a name="l194"><span class="ln">194  </span></a>        System.out.println(&quot;post on ig&quot;); 
+<a name="l195"><span class="ln">195  </span></a>    } 
+<a name="l196"><span class="ln">196  </span></a>    public static int Insta_likes(){ 
+<a name="l197"><span class="ln">197  </span></a>        System.out.println(&quot;insta post liked&quot;); 
+<a name="l198"><span class="ln">198  </span></a>        RETURN 0; 
+<a name="l199"><span class="ln">199  </span></a>    } 
+<a name="l200"><span class="ln">200  </span></a> 
+<a name="l201"><span class="ln">201  </span></a>}*/</span>
+<a name="l202"><span class="ln">202  </span></a><span class="s0">//in case we WANT TO HIDE ALL THE DETAILS THEN WE CAN USE INTERFACE; IT HIDES ALL</span>
+<a name="l203"><span class="ln">203  </span></a><span class="s0">// OF-THE DETAILS</span>
+<a name="l204"><span class="ln">204  </span></a>
+<a name="l205"><span class="ln">205  </span></a><span class="s0">//hides all functionalities 100%</span>
+<a name="l206"><span class="ln">206  </span></a>
+<a name="l207"><span class="ln">207  </span></a><span class="s0">//WE CREATE AN INTERFACE, NOT A CLASS;</span>
+<a name="l208"><span class="ln">208  </span></a><span class="s0">//ALL FUNCTIONS INSIDE INTERFACE ARE EMPTY</span>
+<a name="l209"><span class="ln">209  </span></a><span class="s0">//IT DO NOT HAVE ANY FUNCTIONALITIES OR IMPLEMENTATION</span>
+<a name="l210"><span class="ln">210  </span></a><span class="s0">/* 
+<a name="l211"><span class="ln">211  </span></a>interface Instagram{ 
+<a name="l212"><span class="ln">212  </span></a>    int likes(); 
+<a name="l213"><span class="ln">213  </span></a>    static int instapost(); 
+<a name="l214"><span class="ln">214  </span></a>   void int uploadphoto(); 
+<a name="l215"><span class="ln">215  </span></a> 
+<a name="l216"><span class="ln">216  </span></a>} 
+<a name="l217"><span class="ln">217  </span></a> 
+<a name="l218"><span class="ln">218  </span></a>//there is an implementation class that  uses implements keyword so the functionalities or methods of interface in it ; 
+<a name="l219"><span class="ln">219  </span></a> 
+<a name="l220"><span class="ln">220  </span></a>class Implementation implements Instagram{ 
+<a name="l221"><span class="ln">221  </span></a> 
+<a name="l222"><span class="ln">222  </span></a>    public int likes(){ 
+<a name="l223"><span class="ln">223  </span></a>        return 0; 
+<a name="l224"><span class="ln">224  </span></a> 
+<a name="l225"><span class="ln">225  </span></a>    } 
+<a name="l226"><span class="ln">226  </span></a>     public static int  instapost(){ 
+<a name="l227"><span class="ln">227  </span></a>        return 1; 
+<a name="l228"><span class="ln">228  </span></a>     } 
+<a name="l229"><span class="ln">229  </span></a>     public void int  uploadphoto(){ 
+<a name="l230"><span class="ln">230  </span></a>        System.out.println( 
+<a name="l231"><span class="ln">231  </span></a>                &quot;photo uploaded&quot; 
+<a name="l232"><span class="ln">232  </span></a>        ); 
+<a name="l233"><span class="ln">233  </span></a> 
+<a name="l234"><span class="ln">234  </span></a>    } 
+<a name="l235"><span class="ln">235  </span></a> 
+<a name="l236"><span class="ln">236  </span></a>} 
+<a name="l237"><span class="ln">237  </span></a> public class pillar_of_oops { 
+<a name="l238"><span class="ln">238  </span></a>     public static void main(String[] args) { 
+<a name="l239"><span class="ln">239  </span></a>         //users can call functions , and functions will be called by creating object and it will be  executed  in main function and 
+<a name="l240"><span class="ln">240  </span></a>         // displayed on interface; 
+<a name="l241"><span class="ln">241  </span></a>          Implementation obj = new Implementation(); 
+<a name="l242"><span class="ln">242  </span></a>          obj.uploadphoto(); 
+<a name="l243"><span class="ln">243  </span></a>     } 
+<a name="l244"><span class="ln">244  </span></a>} 
+<a name="l245"><span class="ln">245  </span></a> 
+<a name="l246"><span class="ln">246  </span></a>###### WE CANT USE ABSTRACT CLASS AND INTERFACE TOGETHER; 
+<a name="l247"><span class="ln">247  </span></a>*/</span>
+<a name="l248"><span class="ln">248  </span></a>
+<a name="l249"><span class="ln">249  </span></a>
+<a name="l250"><span class="ln">250  </span></a>
+<a name="l251"><span class="ln">251  </span></a><span class="s0">//                                       4TH PILLAR OF OOPS -    ***ENCAPSULATION***</span>
+<a name="l252"><span class="ln">252  </span></a><span class="s0">/* ENCAPSULATION MEANS - 
+<a name="l253"><span class="ln">253  </span></a>*  LIMITING THE ACCESS OF CLASS PROPERTIES 
+<a name="l254"><span class="ln">254  </span></a>* we can do that by putting #private keyword infront of class properties; 
+<a name="l255"><span class="ln">255  </span></a>* WHILE WE BUILD A SYSTEM WE CAN SHARE THE PRIVATE PROPERTIES BUT ONLY INSIDE THE  BANK CLASS; 
+<a name="l256"><span class="ln">256  </span></a>* FOR THAT WE NEED TO PERFORM CHECKS 
+<a name="l257"><span class="ln">257  </span></a>*MAIN CLASS NEVER HAS any access to properties it only has access to functionalities which can be used to display a copy of class properties 
+<a name="l258"><span class="ln">258  </span></a>* 
+<a name="l259"><span class="ln">259  </span></a>* */</span>
+<a name="l260"><span class="ln">260  </span></a><span class="s0">/* 
+<a name="l261"><span class="ln">261  </span></a>class Bank{ 
+<a name="l262"><span class="ln">262  </span></a>    private String password = &quot;Sonali@1&quot;; 
+<a name="l263"><span class="ln">263  </span></a>    public void Change_password(String newpassword){ 
+<a name="l264"><span class="ln">264  </span></a>        // we will create a copy of og password by performing some checks 
+<a name="l265"><span class="ln">265  </span></a>        //lots of checks 
+<a name="l266"><span class="ln">266  </span></a>        if(newpassword.length()&gt;8){ 
+<a name="l267"><span class="ln">267  </span></a>            newpassword=password; 
+<a name="l268"><span class="ln">268  </span></a>        } 
+<a name="l269"><span class="ln">269  </span></a>    } 
+<a name="l270"><span class="ln">270  </span></a>//FOR DISPLAYING THE PASSWORD WE HAVE TO RUN ANOTHER FUNCTION 
+<a name="l271"><span class="ln">271  </span></a>    public String showpassword(){ 
+<a name="l272"><span class="ln">272  </span></a>        return password; 
+<a name="l273"><span class="ln">273  </span></a>        //this returns a copy of original password; 
+<a name="l274"><span class="ln">274  </span></a> 
+<a name="l275"><span class="ln">275  </span></a>    } 
+<a name="l276"><span class="ln">276  </span></a> 
+<a name="l277"><span class="ln">277  </span></a> 
+<a name="l278"><span class="ln">278  </span></a>} 
+<a name="l279"><span class="ln">279  </span></a>public class pillar_of_oops { 
+<a name="l280"><span class="ln">280  </span></a>    public static void main(String[] args) { 
+<a name="l281"><span class="ln">281  </span></a>        Bank obj = new Bank(); 
+<a name="l282"><span class="ln">282  </span></a>    //    System.out.println( obj.password); //if we do this it displays  &quot;java: password has private access in Bank&quot; 
+<a name="l283"><span class="ln">283  </span></a>        //so we create a function called newpassword where we will copy value of original password; 
+<a name="l284"><span class="ln">284  </span></a> 
+<a name="l285"><span class="ln">285  </span></a>        obj.Change_password(&quot;neha@17yoyo&quot;); //we made a copy of it; 
+<a name="l286"><span class="ln">286  </span></a>        // but even if we display it it will not be displayed and throw an error; 
+<a name="l287"><span class="ln">287  </span></a> 
+<a name="l288"><span class="ln">288  </span></a> 
+<a name="l289"><span class="ln">289  </span></a>        //fOR DISPLAYING THE PASSWORD WE HAVE TO RUN ANOTHER FUNCTION 
+<a name="l290"><span class="ln">290  </span></a>        //in order to call it we have to call its object 
+<a name="l291"><span class="ln">291  </span></a>       String passwordinMain= obj.showpassword(); 
+<a name="l292"><span class="ln">292  </span></a>       //storing this value in a string 
+<a name="l293"><span class="ln">293  </span></a>        //now displaying the string 
+<a name="l294"><span class="ln">294  </span></a>        System.out.println(passwordinMain); 
+<a name="l295"><span class="ln">295  </span></a>    } 
+<a name="l296"><span class="ln">296  </span></a>} 
+<a name="l297"><span class="ln">297  </span></a>*/</span>
+<a name="l298"><span class="ln">298  </span></a>
+<a name="l299"><span class="ln">299  </span></a>
+<a name="l300"><span class="ln">300  </span></a><span class="s0">/* 
+<a name="l301"><span class="ln">301  </span></a>class Bank{ 
+<a name="l302"><span class="ln">302  </span></a>    private String password = &quot;Sachin@10&quot;; 
+<a name="l303"><span class="ln">303  </span></a>    public void changepassword(String newpassword){ 
+<a name="l304"><span class="ln">304  </span></a>        if (newpassword.length()&gt;8) { 
+<a name="l305"><span class="ln">305  </span></a>           password = newpassword; 
+<a name="l306"><span class="ln">306  </span></a>        } 
+<a name="l307"><span class="ln">307  </span></a>    } 
+<a name="l308"><span class="ln">308  </span></a>    public String showpassword(){ 
+<a name="l309"><span class="ln">309  </span></a>        return password; 
+<a name="l310"><span class="ln">310  </span></a>    } 
+<a name="l311"><span class="ln">311  </span></a>} 
+<a name="l312"><span class="ln">312  </span></a>public class pillar_of_oops { 
+<a name="l313"><span class="ln">313  </span></a>    public static void main(String[] args) { 
+<a name="l314"><span class="ln">314  </span></a>        Bank obj= new Bank(); 
+<a name="l315"><span class="ln">315  </span></a>        obj.changepassword(&quot;SONALISINGH@21&quot;); 
+<a name="l316"><span class="ln">316  </span></a>        String PasswordInMAIN = obj.showpassword(); 
+<a name="l317"><span class="ln">317  </span></a>        System.out.println(PasswordInMAIN); 
+<a name="l318"><span class="ln">318  </span></a>    } 
+<a name="l319"><span class="ln">319  </span></a>} 
+<a name="l320"><span class="ln">320  </span></a> 
+<a name="l321"><span class="ln">321  </span></a>*/</span>
+<a name="l322"><span class="ln">322  </span></a>
+<a name="l323"><span class="ln">323  </span></a><span class="s0">/* 
+<a name="l324"><span class="ln">324  </span></a>class Bank { 
+<a name="l325"><span class="ln">325  </span></a>    private String password = &quot;SonaliSingh@12&quot;; 
+<a name="l326"><span class="ln">326  </span></a> 
+<a name="l327"><span class="ln">327  </span></a>    public void Change_password(String newpassword) { 
+<a name="l328"><span class="ln">328  </span></a>        if (newpassword.length()&gt;8){ 
+<a name="l329"><span class="ln">329  </span></a>            password=newpassword; 
+<a name="l330"><span class="ln">330  </span></a>        } 
+<a name="l331"><span class="ln">331  </span></a>    } 
+<a name="l332"><span class="ln">332  </span></a> 
+<a name="l333"><span class="ln">333  </span></a>    public String showpassword() { 
+<a name="l334"><span class="ln">334  </span></a>        return password; 
+<a name="l335"><span class="ln">335  </span></a>    } 
+<a name="l336"><span class="ln">336  </span></a>} 
+<a name="l337"><span class="ln">337  </span></a>public class pillar_of_oops { 
+<a name="l338"><span class="ln">338  </span></a>    public static void main(String[] args) { 
+<a name="l339"><span class="ln">339  </span></a>        Bank obj = new Bank(); 
+<a name="l340"><span class="ln">340  </span></a>        obj.Change_password(&quot;neha@17yoyo&quot;); 
+<a name="l341"><span class="ln">341  </span></a>        String passwordinMain= obj.showpassword(); 
+<a name="l342"><span class="ln">342  </span></a>        System.out.println(passwordinMain); 
+<a name="l343"><span class="ln">343  </span></a>    } 
+<a name="l344"><span class="ln">344  </span></a>} 
+<a name="l345"><span class="ln">345  </span></a>*/</span>
+<a name="l346"><span class="ln">346  </span></a>
+<a name="l347"><span class="ln">347  </span></a>
+<a name="l348"><span class="ln">348  </span></a>
+<a name="l349"><span class="ln">349  </span></a>
+<a name="l350"><span class="ln">350  </span></a>
+<a name="l351"><span class="ln">351  </span></a>
+<a name="l352"><span class="ln">352  </span></a>
+<a name="l353"><span class="ln">353  </span></a>
+<a name="l354"><span class="ln">354  </span></a>
+<a name="l355"><span class="ln">355  </span></a>
+<a name="l356"><span class="ln">356  </span></a></pre>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Calculatingpercentageoftotalmarks.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #cc7832;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Calculatingpercentageoftotalmarks.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a>
+<a name="l2"><span class="ln">2    </span></a><span class="s1">import </span><span class="s0">java.util.Scanner</span><span class="s1">;</span>
+<a name="l3"><span class="ln">3    </span></a>
+<a name="l4"><span class="ln">4    </span></a><span class="s1">public class </span><span class="s0">Calculatingpercentageoftotalmarks {</span>
+<a name="l5"><span class="ln">5    </span></a>    <span class="s1">public static void </span><span class="s0">main(String[] args) {</span>
+<a name="l6"><span class="ln">6    </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;calculating percentage from total marks of student in CBSE exam&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l7"><span class="ln">7    </span></a>        <span class="s0">Scanner sc = </span><span class="s1">new </span><span class="s0">Scanner(System.in)</span><span class="s1">;</span>
+<a name="l8"><span class="ln">8    </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;enter marks of English&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l9"><span class="ln">9    </span></a>        <span class="s1">int </span><span class="s0">a = sc.nextInt()</span><span class="s1">;</span>
+<a name="l10"><span class="ln">10   </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;enter marks of Hindi&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l11"><span class="ln">11   </span></a>        <span class="s1">int </span><span class="s0">b = sc.nextInt()</span><span class="s1">;</span>
+<a name="l12"><span class="ln">12   </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;enter marks of Maths&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l13"><span class="ln">13   </span></a>        <span class="s1">int </span><span class="s0">c = sc.nextInt()</span><span class="s1">;</span>
+<a name="l14"><span class="ln">14   </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;enter marks of Science&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l15"><span class="ln">15   </span></a>        <span class="s1">int </span><span class="s0">d = sc.nextInt()</span><span class="s1">;</span>
+<a name="l16"><span class="ln">16   </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;enter marks of Social Science&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l17"><span class="ln">17   </span></a>        <span class="s1">int </span><span class="s0">e = sc.nextInt()</span><span class="s1">;</span>
+<a name="l18"><span class="ln">18   </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;TOTAL MARKS ARE&quot;</span><span class="s0">)</span><span class="s1">; </span>
+<a name="l19"><span class="ln">19   </span></a>        <span class="s1">int </span><span class="s0">sum = a + b + c + d +e</span><span class="s1">;</span>
+<a name="l20"><span class="ln">20   </span></a>        <span class="s0">System.out.println(sum)</span><span class="s1">;</span>
+<a name="l21"><span class="ln">21   </span></a>        <span class="s0">System.out.println(</span><span class="s2">&quot;total percentage is&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l22"><span class="ln">22   </span></a>        <span class="s1">int </span><span class="s0">percentage = sum/</span><span class="s3">5</span><span class="s1">;</span>
+<a name="l23"><span class="ln">23   </span></a>        <span class="s0">System.out.println(percentage)</span><span class="s1">;</span>
+<a name="l24"><span class="ln">24   </span></a>        <span class="s1">if</span><span class="s0">(percentage&lt;</span><span class="s3">33</span><span class="s0">){</span>
+<a name="l25"><span class="ln">25   </span></a>            <span class="s0">System.out.println(</span><span class="s2">&quot;fail&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l26"><span class="ln">26   </span></a>        <span class="s0">}</span>
+<a name="l27"><span class="ln">27   </span></a>        <span class="s1">else </span><span class="s0">{</span>
+<a name="l28"><span class="ln">28   </span></a>            <span class="s0">System.out.println(</span><span class="s2">&quot;pass&quot;</span><span class="s0">)</span><span class="s1">;</span>
+<a name="l29"><span class="ln">29   </span></a>        <span class="s0">}</span>
+<a name="l30"><span class="ln">30   </span></a>    <span class="s0">}</span>
+<a name="l31"><span class="ln">31   </span></a><span class="s0">}</span>
+<a name="l32"><span class="ln">32   </span></a></pre>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>Functions.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Functions.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">public class </span><span class="s1">Functions {</span>
+<a name="l2"><span class="ln">2    </span></a> <span class="s2">/*   public static int sum(int a, int b){ 
+<a name="l3"><span class="ln">3    </span></a> a = 100; 
+<a name="l4"><span class="ln">4    </span></a>  b = 200; 
+<a name="l5"><span class="ln">5    </span></a> int c = a+b; 
+<a name="l6"><span class="ln">6    </span></a> return c; 
+<a name="l7"><span class="ln">7    </span></a>    } 
+<a name="l8"><span class="ln">8    </span></a>//execution of program from main function; 
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a>    // WHY ARE FUNCTIONS REQUIRED 
+<a name="l11"><span class="ln">11   </span></a>  *//*  -PROGRAM IS DIVIDED INTO MULTIPLE SMALL PARTS OF CODE 
+<a name="l12"><span class="ln">12   </span></a>    -INCREASES READABILITY 
+<a name="l13"><span class="ln">13   </span></a>   - CODE IS ORGANISED AND NEAT;  *//* 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a>    public static void main(String[] args) { 
+<a name="l16"><span class="ln">16   </span></a>        //JAVA FIRST RUNS MAIN FUNCTION; 
+<a name="l17"><span class="ln">17   </span></a>        //calls another function sum; 
+<a name="l18"><span class="ln">18   </span></a>        //add two numbers 
+<a name="l19"><span class="ln">19   </span></a>        int a= 8; 
+<a name="l20"><span class="ln">20   </span></a>        int b = 10; 
+<a name="l21"><span class="ln">21   </span></a>        int c= sum(a,b); 
+<a name="l22"><span class="ln">22   </span></a>        System.out.println(c); 
+<a name="l23"><span class="ln">23   </span></a>        //we can do this using a function too; 
+<a name="l24"><span class="ln">24   </span></a>        example; we created sum; 
+<a name="l25"><span class="ln">25   </span></a>        after main function is running one time; value of a =5; b=10; 
+<a name="l26"><span class="ln">26   </span></a>        then it calls sum function; inside sum function value of a is updated to 100 and b to 200; 
+<a name="l27"><span class="ln">27   </span></a>         after that value of a and b is store in a by summing up in variable c; 
+<a name="l28"><span class="ln">28   </span></a>         this c variable is returned to main function and printed; 
+<a name="l29"><span class="ln">29   </span></a> 
+<a name="l30"><span class="ln">30   </span></a> 
+<a name="l31"><span class="ln">31   </span></a>         NOTE; A OR B KI ORIGINAL VALUES CHANGE NHI HONGI; IS LIYE JAB HM SOUT(A) AND SOUT(B) 
+<a name="l32"><span class="ln">32   </span></a>                  KRENGE TOH a or b ki initial values print hongi; 
+<a name="l33"><span class="ln">33   </span></a>                  */</span>
+<a name="l34"><span class="ln">34   </span></a>
+<a name="l35"><span class="ln">35   </span></a>    <span class="s2">//creating void changeA&amp;B function;</span>
+<a name="l36"><span class="ln">36   </span></a>    <span class="s2">//void is a return type but is used for changing or printing values of a and b;</span>
+<a name="l37"><span class="ln">37   </span></a>    <span class="s2">// and not returning anything;</span>
+<a name="l38"><span class="ln">38   </span></a>
+<a name="l39"><span class="ln">39   </span></a>
+<a name="l40"><span class="ln">40   </span></a> <span class="s2">/*   public static void changeAandB(int a, int b){ 
+<a name="l41"><span class="ln">41   </span></a>         a = 89; 
+<a name="l42"><span class="ln">42   </span></a>        b = 765; 
+<a name="l43"><span class="ln">43   </span></a>        System.out.println(&quot;a= &quot;+a +&quot; b &quot;+b); 
+<a name="l44"><span class="ln">44   </span></a> 
+<a name="l45"><span class="ln">45   </span></a> 
+<a name="l46"><span class="ln">46   </span></a>    }*/</span>
+<a name="l47"><span class="ln">47   </span></a>
+<a name="l48"><span class="ln">48   </span></a>    <span class="s2">/*public static void main(String[] args) { 
+<a name="l49"><span class="ln">49   </span></a>        int a = 500; 
+<a name="l50"><span class="ln">50   </span></a>        int b= 60; 
+<a name="l51"><span class="ln">51   </span></a>        System.out.println(&quot;a= &quot;+a +&quot; b &quot;+b); 
+<a name="l52"><span class="ln">52   </span></a>        //then we return the changeA&amp;B function; 
+<a name="l53"><span class="ln">53   </span></a>        //because any function is returned and executed only in main function; 
+<a name="l54"><span class="ln">54   </span></a> 
+<a name="l55"><span class="ln">55   </span></a>        //when we write return type; we do not write data type; 
+<a name="l56"><span class="ln">56   </span></a>        //like changeAandB(int a, int b) 
+<a name="l57"><span class="ln">57   </span></a> 
+<a name="l58"><span class="ln">58   </span></a>        //after function is executed; java ill delete the sum function values of 100; and 200; 
+<a name="l59"><span class="ln">59   </span></a> 
+<a name="l60"><span class="ln">60   </span></a> 
+<a name="l61"><span class="ln">61   </span></a>        changeAandB(a,b); 
+<a name="l62"><span class="ln">62   </span></a> 
+<a name="l63"><span class="ln">63   </span></a>    }*/</span>
+<a name="l64"><span class="ln">64   </span></a>  <span class="s2">/* public static void sum(int a, int b , int c){ 
+<a name="l65"><span class="ln">65   </span></a>      a= 76; 
+<a name="l66"><span class="ln">66   </span></a>        b =89; 
+<a name="l67"><span class="ln">67   </span></a>        c= 108; 
+<a name="l68"><span class="ln">68   </span></a> 
+<a name="l69"><span class="ln">69   </span></a>       System.out.println(&quot;a=&quot;+a+&quot; b=&quot;+b+&quot; c=&quot;+c);} 
+<a name="l70"><span class="ln">70   </span></a> 
+<a name="l71"><span class="ln">71   </span></a>    public static void main(String[] args) { 
+<a name="l72"><span class="ln">72   </span></a>        int a = 45; 
+<a name="l73"><span class="ln">73   </span></a>        int b = 78; 
+<a name="l74"><span class="ln">74   </span></a>        int c= 78; 
+<a name="l75"><span class="ln">75   </span></a>        System.out.println(&quot;a=&quot;+a+&quot; b=&quot;+b+&quot; c=&quot;+c); 
+<a name="l76"><span class="ln">76   </span></a>        //sum function assign values 68,67,68 to int a , int b , int c automatically; 
+<a name="l77"><span class="ln">77   </span></a>        sum(67,68,69); 
+<a name="l78"><span class="ln">78   </span></a>        //if we update values of a b and c inside function; then updated values of sum will be printed; 
+<a name="l79"><span class="ln">79   </span></a>        */</span>
+<a name="l80"><span class="ln">80   </span></a>  <span class="s2">/*  public static int sum(int a, int b , int c){ 
+<a name="l81"><span class="ln">81   </span></a>        a= 100; 
+<a name="l82"><span class="ln">82   </span></a>        b =150; 
+<a name="l83"><span class="ln">83   </span></a> 
+<a name="l84"><span class="ln">84   </span></a>// will return values of a+b+c 
+<a name="l85"><span class="ln">85   </span></a>       return a+b+c;} 
+<a name="l86"><span class="ln">86   </span></a> 
+<a name="l87"><span class="ln">87   </span></a>    public static void main(String[] args) { 
+<a name="l88"><span class="ln">88   </span></a>        int a = 45; 
+<a name="l89"><span class="ln">89   </span></a>        int b = 78; 
+<a name="l90"><span class="ln">90   </span></a> 
+<a name="l91"><span class="ln">91   </span></a> 
+<a name="l92"><span class="ln">92   </span></a>        int c = sum(a,b,150); 
+<a name="l93"><span class="ln">93   </span></a>        System.out.println(c);*/</span>
+<a name="l94"><span class="ln">94   </span></a>
+<a name="l95"><span class="ln">95   </span></a>
+<a name="l96"><span class="ln">96   </span></a>    <span class="s2">//lets do it for arrays</span>
+<a name="l97"><span class="ln">97   </span></a>    <span class="s0">public static void </span><span class="s1">changeArray(</span><span class="s0">int</span><span class="s1">[]arr){</span>
+<a name="l98"><span class="ln">98   </span></a>        <span class="s1">arr[</span><span class="s3">0</span><span class="s1">]=</span><span class="s3">10</span><span class="s0">;</span>
+<a name="l99"><span class="ln">99   </span></a>        <span class="s1">arr[</span><span class="s3">1</span><span class="s1">]=</span><span class="s3">20</span><span class="s0">;</span>
+<a name="l100"><span class="ln">100  </span></a>        <span class="s1">arr[</span><span class="s3">2</span><span class="s1">]= </span><span class="s3">30</span><span class="s0">;</span>
+<a name="l101"><span class="ln">101  </span></a>
+<a name="l102"><span class="ln">102  </span></a>        <span class="s1">System.out.println(</span><span class="s4">&quot;arr[0]= &quot;</span><span class="s1">+ arr[</span><span class="s3">0</span><span class="s1">]+</span><span class="s4">&quot; arr[1]= &quot;</span><span class="s1">+ arr[</span><span class="s3">1</span><span class="s1">]+ </span><span class="s4">&quot; arr[2]= &quot;</span><span class="s1">+ arr[</span><span class="s3">2</span><span class="s1">])</span><span class="s0">;</span>
+<a name="l103"><span class="ln">103  </span></a>    <span class="s1">}</span>
+<a name="l104"><span class="ln">104  </span></a>
+<a name="l105"><span class="ln">105  </span></a>    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+<a name="l106"><span class="ln">106  </span></a>        <span class="s0">int </span><span class="s1">arr[]= </span><span class="s0">new int </span><span class="s1">[</span><span class="s3">3</span><span class="s1">]</span><span class="s0">;</span>
+<a name="l107"><span class="ln">107  </span></a>        <span class="s1">arr[</span><span class="s3">0</span><span class="s1">]=</span><span class="s3">1</span><span class="s0">;</span>
+<a name="l108"><span class="ln">108  </span></a>    <span class="s1">arr[</span><span class="s3">1</span><span class="s1">]=</span><span class="s3">2</span><span class="s0">;</span>
+<a name="l109"><span class="ln">109  </span></a>    <span class="s1">arr[</span><span class="s3">2</span><span class="s1">]= </span><span class="s3">3</span><span class="s0">;</span>
+<a name="l110"><span class="ln">110  </span></a>        <span class="s1">System.out.println(</span><span class="s4">&quot;arr[0]= &quot;</span><span class="s1">+ arr[</span><span class="s3">0</span><span class="s1">]+</span><span class="s4">&quot; arr[1]= &quot;</span><span class="s1">+ arr[</span><span class="s3">1</span><span class="s1">]+ </span><span class="s4">&quot; arr[2]= &quot;</span><span class="s1">+ arr[</span><span class="s3">2</span><span class="s1">])</span><span class="s0">;</span>
+<a name="l111"><span class="ln">111  </span></a>    <span class="s1">changeArray(arr)</span><span class="s0">;</span>
+<a name="l112"><span class="ln">112  </span></a>
+<a name="l113"><span class="ln">113  </span></a>        <span class="s1">System.out.println(</span><span class="s4">&quot;arr[0]= &quot;</span><span class="s1">+ arr[</span><span class="s3">0</span><span class="s1">]+</span><span class="s4">&quot; arr[1]= &quot;</span><span class="s1">+ arr[</span><span class="s3">1</span><span class="s1">]+ </span><span class="s4">&quot; arr[2]= &quot;</span><span class="s1">+ arr[</span><span class="s3">2</span><span class="s1">])</span><span class="s0">;</span><span class="s1">}</span>
+<a name="l114"><span class="ln">114  </span></a>
+<a name="l115"><span class="ln">115  </span></a><span class="s1">}</span>
+<a name="l116"><span class="ln">116  </span></a></pre>
+</body>
+</html>

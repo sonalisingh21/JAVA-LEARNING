@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>oopsjava.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+oopsjava.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">/*class Calculator{ 
+<a name="l2"><span class="ln">2    </span></a>    public static int add(int a, int b){ 
+<a name="l3"><span class="ln">3    </span></a>        //static in nature; called as functions; dont require any object to call them; 
+<a name="l4"><span class="ln">4    </span></a>        return a+b; 
+<a name="l5"><span class="ln">5    </span></a> 
+<a name="l6"><span class="ln">6    </span></a>    } 
+<a name="l7"><span class="ln">7    </span></a>    public int subtract(int a ,int b){ 
+<a name="l8"><span class="ln">8    </span></a>        //non-static in nature; called as methods; require an object to be created  to call them; 
+<a name="l9"><span class="ln">9    </span></a>        return a-b; 
+<a name="l10"><span class="ln">10   </span></a>    }}*/</span>
+<a name="l11"><span class="ln">11   </span></a>
+<a name="l12"><span class="ln">12   </span></a><span class="s0">/*public class oopsjava { //main class 
+<a name="l13"><span class="ln">13   </span></a>    public static void main(String[] args) { 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a>        //how to use static functionality 
+<a name="l16"><span class="ln">16   </span></a>        // datatype variablename = classname.functioname(parameters) 
+<a name="l17"><span class="ln">17   </span></a>        int c= Calculator.add(50,50); 
+<a name="l18"><span class="ln">18   </span></a>        System.out.println(c); 
+<a name="l19"><span class="ln">19   </span></a> 
+<a name="l20"><span class="ln">20   </span></a> 
+<a name="l21"><span class="ln">21   </span></a>        //how to use non-static functionality 
+<a name="l22"><span class="ln">22   </span></a>        //create an object; classname objectname = new classname(); 
+<a name="l23"><span class="ln">23   </span></a>        Calculator subtraction= new Calculator(); 
+<a name="l24"><span class="ln">24   </span></a>        //how to call the method by creating object 
+<a name="l25"><span class="ln">25   </span></a>        // datatype variablename = objectname.methodname(parameters) 
+<a name="l26"><span class="ln">26   </span></a>        int d = subtraction.subtract(20, 10); 
+<a name="l27"><span class="ln">27   </span></a>        System.out.println(d); 
+<a name="l28"><span class="ln">28   </span></a> 
+<a name="l29"><span class="ln">29   </span></a> 
+<a name="l30"><span class="ln">30   </span></a>    } 
+<a name="l31"><span class="ln">31   </span></a> 
+<a name="l32"><span class="ln">32   </span></a>}*/</span>
+<a name="l33"><span class="ln">33   </span></a>
+<a name="l34"><span class="ln">34   </span></a>
+<a name="l35"><span class="ln">35   </span></a><span class="s0">//HOW TO ACCESS PROPERTIES OF A CLASS;</span>
+<a name="l36"><span class="ln">36   </span></a>
+<a name="l37"><span class="ln">37   </span></a>
+<a name="l38"><span class="ln">38   </span></a><span class="s0">/* 
+<a name="l39"><span class="ln">39   </span></a>class Student{ 
+<a name="l40"><span class="ln">40   </span></a> //   class has properties that can be accessed by main function 
+<a name="l41"><span class="ln">41   </span></a>    //these properties are mixed of different data-types like int string double etc 
+<a name="l42"><span class="ln">42   </span></a>    //these properties are stored in HEAP MEMORY 
+<a name="l43"><span class="ln">43   </span></a> 
+<a name="l44"><span class="ln">44   </span></a>    //all these written are non-static properties of a class student 
+<a name="l45"><span class="ln">45   </span></a>    int roll_number; 
+<a name="l46"><span class="ln">46   </span></a>    String name; 
+<a name="l47"><span class="ln">47   </span></a>    int age; 
+<a name="l48"><span class="ln">48   </span></a>    int class_number; 
+<a name="l49"><span class="ln">49   </span></a> 
+<a name="l50"><span class="ln">50   </span></a> 
+<a name="l51"><span class="ln">51   </span></a> 
+<a name="l52"><span class="ln">52   </span></a> 
+<a name="l53"><span class="ln">53   </span></a>  } 
+<a name="l54"><span class="ln">54   </span></a> 
+<a name="l55"><span class="ln">55   </span></a>public class oopsjava { //main class 
+<a name="l56"><span class="ln">56   </span></a>    public static void main(String[] args) { 
+<a name="l57"><span class="ln">57   </span></a> 
+<a name="l58"><span class="ln">58   </span></a>        //how to access non-static property; 
+<a name="l59"><span class="ln">59   </span></a>        //create object; 
+<a name="l60"><span class="ln">60   </span></a>        Student property = new Student(); 
+<a name="l61"><span class="ln">61   </span></a>        //object_name.property = declare; 
+<a name="l62"><span class="ln">62   </span></a>        property.roll_number=51; 
+<a name="l63"><span class="ln">63   </span></a>        property.name= &quot;sonali&quot;; 
+<a name="l64"><span class="ln">64   </span></a>        property.class_number=5; 
+<a name="l65"><span class="ln">65   </span></a>        System.out.println(property.class_number); 
+<a name="l66"><span class="ln">66   </span></a> 
+<a name="l67"><span class="ln">67   </span></a>        //how to access static functionality 
+<a name="l68"><span class="ln">68   </span></a>//        classname.property_of_class 
+<a name="l69"><span class="ln">69   </span></a>        Student.division = 'A'; 
+<a name="l70"><span class="ln">70   </span></a> 
+<a name="l71"><span class="ln">71   </span></a>        //we can also access static property like this way 
+<a name="l72"><span class="ln">72   </span></a>        property.division = 'a'; 
+<a name="l73"><span class="ln">73   </span></a>        System.out.println(Student.division); 
+<a name="l74"><span class="ln">74   </span></a> 
+<a name="l75"><span class="ln">75   </span></a>    }} 
+<a name="l76"><span class="ln">76   </span></a>*/</span>
+<a name="l77"><span class="ln">77   </span></a>
+<a name="l78"><span class="ln">78   </span></a>
+<a name="l79"><span class="ln">79   </span></a>
+<a name="l80"><span class="ln">80   </span></a><span class="s0">//creating multiple objects;</span>
+<a name="l81"><span class="ln">81   </span></a><span class="s0">/* 
+<a name="l82"><span class="ln">82   </span></a>class Student{ 
+<a name="l83"><span class="ln">83   </span></a>    int roll_number; 
+<a name="l84"><span class="ln">84   </span></a>    String name; 
+<a name="l85"><span class="ln">85   </span></a>    int age; 
+<a name="l86"><span class="ln">86   </span></a>    int class_number; 
+<a name="l87"><span class="ln">87   </span></a> 
+<a name="l88"><span class="ln">88   </span></a>    static char division; 
+<a name="l89"><span class="ln">89   </span></a>} 
+<a name="l90"><span class="ln">90   </span></a>public class oopsjava { 
+<a name="l91"><span class="ln">91   </span></a>    public static void main(String[] args) { 
+<a name="l92"><span class="ln">92   </span></a> 
+<a name="l93"><span class="ln">93   </span></a>        Student obj1 = new Student(); 
+<a name="l94"><span class="ln">94   </span></a>        obj1.roll_number= 45; 
+<a name="l95"><span class="ln">95   </span></a>        obj1.name= &quot;ssonali&quot;; 
+<a name="l96"><span class="ln">96   </span></a>        obj1.division= 'a';//axccessing static property via object 
+<a name="l97"><span class="ln">97   </span></a>        System.out.println(obj1.division); 
+<a name="l98"><span class="ln">98   </span></a> 
+<a name="l99"><span class="ln">99   </span></a>        Student obj2 = new Student(); 
+<a name="l100"><span class="ln">100  </span></a>        obj1.roll_number= 46; 
+<a name="l101"><span class="ln">101  </span></a>        obj1.name= &quot;neha&quot;; 
+<a name="l102"><span class="ln">102  </span></a>        obj1.division= 'b';//axccessing static property via object 
+<a name="l103"><span class="ln">103  </span></a>        System.out.println(obj2.division); 
+<a name="l104"><span class="ln">104  </span></a> 
+<a name="l105"><span class="ln">105  </span></a>        System.out.println(obj1.division); 
+<a name="l106"><span class="ln">106  </span></a>*/</span>
+<a name="l107"><span class="ln">107  </span></a>
+<a name="l108"><span class="ln">108  </span></a>        <span class="s0">//note- SINCE WE ARE SHARING STATIC PROPERTIES;</span>
+<a name="l109"><span class="ln">109  </span></a>     <span class="s0">//   IF WE MAKE CHANGES IN ONE OBJECT ; THEN VALUE OF OTHER OBJECT WILL BE CHANGED TOO</span>
+<a name="l110"><span class="ln">110  </span></a>
+<a name="l111"><span class="ln">111  </span></a>        <span class="s0">//OBJECTS= NON STATIC PROPERTIES ARE STORED IN HEAP MEMORY</span>
+<a name="l112"><span class="ln">112  </span></a>        <span class="s0">//BUT THEY ARE POINTING TO SAME STATIC PROPERTY</span>
+<a name="l113"><span class="ln">113  </span></a>
+<a name="l114"><span class="ln">114  </span></a>      <span class="s0">//how to call methods of a class when non static properties are involved</span>
+<a name="l115"><span class="ln">115  </span></a><span class="s2">class </span><span class="s1">Solution{</span>
+<a name="l116"><span class="ln">116  </span></a>    <span class="s2">int </span><span class="s1">a</span><span class="s2">;</span>
+<a name="l117"><span class="ln">117  </span></a>    <span class="s2">int </span><span class="s1">b</span><span class="s2">; </span><span class="s0">//these are non static; i e methods; to call them we need objects</span>
+<a name="l118"><span class="ln">118  </span></a>          <span class="s2">public void </span><span class="s1">print(){</span>
+<a name="l119"><span class="ln">119  </span></a>              <span class="s1">System.out.println(a)</span><span class="s2">;</span>
+<a name="l120"><span class="ln">120  </span></a>              <span class="s1">System.out.println(b)</span><span class="s2">;</span>
+<a name="l121"><span class="ln">121  </span></a>
+<a name="l122"><span class="ln">122  </span></a>
+<a name="l123"><span class="ln">123  </span></a><span class="s1">}</span>
+<a name="l124"><span class="ln">124  </span></a>    <span class="s1">}</span>
+<a name="l125"><span class="ln">125  </span></a><span class="s2">public class </span><span class="s1">oopsjava {</span>
+<a name="l126"><span class="ln">126  </span></a>    <span class="s2">public static void </span><span class="s1">main(String[] args) {</span>
+<a name="l127"><span class="ln">127  </span></a>        <span class="s0">//create object</span>
+<a name="l128"><span class="ln">128  </span></a>        <span class="s1">Solution object= </span><span class="s2">new </span><span class="s1">Solution()</span><span class="s2">;</span>
+<a name="l129"><span class="ln">129  </span></a>        <span class="s1">object.a=</span><span class="s3">6</span><span class="s2">;</span>
+<a name="l130"><span class="ln">130  </span></a>        <span class="s1">object.b=</span><span class="s3">4</span><span class="s2">;</span>
+<a name="l131"><span class="ln">131  </span></a>        <span class="s1">object.print()</span><span class="s2">;</span>
+<a name="l132"><span class="ln">132  </span></a>        <span class="s0">//solution class is default; thats why main class is able to access it;</span>
+<a name="l133"><span class="ln">133  </span></a>    <span class="s1">}}</span>
+<a name="l134"><span class="ln">134  </span></a>
+<a name="l135"><span class="ln">135  </span></a></pre>
+</body>
+</html>
